@@ -1,5 +1,5 @@
 // TODO: write your code here
-import sum from './basic';
-
-console.log('worked');
-console.log(sum([1, 2]));
+export default function healthCalc(player) {
+  const status = { healthy: 51, wounded: 15, critical: 0 };
+  return Object.keys(status).find((name) => status[name] <= player.health);
+}
